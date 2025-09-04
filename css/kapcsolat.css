@@ -15,9 +15,13 @@ html, body {
         font-size: 5rem;
     }
 }
-
 .alszoveg{
     color: rgb(252, 251, 249);
+}
+
+.elerhetoseg{
+    font-size: 200%;
+    color: rgb(199, 197, 192);
 }
 
 main {
@@ -64,4 +68,7 @@ main {
 }
 .hirek{
  text-align: center;
+}
+form {
+  margin-left: 50px;
 }
