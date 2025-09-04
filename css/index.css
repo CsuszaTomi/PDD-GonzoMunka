@@ -4,7 +4,16 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-  
+
+.nagycim{
+    font-size: 1000%;
+    color: rgb(252, 251, 249);
+}
+
+.alszoveg{
+    color: rgb(252, 251, 249);
+}
+
 main {
     flex: 1; 
 }
@@ -24,7 +33,8 @@ main {
 }
   
 .promo {
-    background-color: #acecbc; 
+    /*background-color: #acecbc;*/
+    background-image: linear-gradient(rgb(241, 241, 234), rgb(35, 192, 21));
 }
   
 .gomb {
