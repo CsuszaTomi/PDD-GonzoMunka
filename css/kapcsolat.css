@@ -39,11 +39,13 @@ main {
 }
   
 .cím {
-    background-image: linear-gradient(red, rgb(241, 241, 234));
+    background: linear-gradient(180deg, #ff0000 0%, #ffffff 100%);
+    min-height: 400px;
 }
   
 .promo {
-    background-image: linear-gradient(rgb(241, 241, 234), rgb(35, 192, 21));
+    background: linear-gradient(0deg, rgb(35, 192, 21) 0%, #ffffff 100%);
+    min-height: 300px;
 }
   
 .gomb {
