@@ -1,10 +1,10 @@
-Diósgyőri VTK;Kazincbarcika;2025-08-16;NB I;4;27;Döntetlen;Diósgyőri Stadion;5468;Bogár G.
-Zalaegerszeg;Újpest;2025-08-23;NB I;5;28;Újpest;ZTE Aréna;4464;Antal P.
-Ferencvárosi TC;Puskás Akadémia;2025-08-16;NB I;4;31;Puskás Akadémia;Groupama Aréna;10679;Karakó F.
-Újpest;Paks;2025-08-10;NB I;3;33;Paks;Szusza Ferenc Stadion;8650;Berke B.
-Kisvárda;Paks;2025-08-03;NB I;2;30;Paks;Várkerti Stadion;2084;Bognár T.
-Paks;Győri ETO;2025-07-27;NB I;1;25;Döntetlen;Fehérvári úti stadion;2679;Rúsz M.
-Győri ETO;Nyíregyháza;2025-08-31;NB I;6;20;Győri ETO;ETO Park;3340;Bogár G.
-Nyíregyháza;Diósgyőri VTK;2025-08-23;NB I;5;26;Diósgyőri VTK;Városi Stadion;7083;Berke B.
-Nyíregyháza;Ferencvárosi TC;2025-08-09;NB I;3;25;Ferencvárosi TC;Városi Stadion;7980;Csonka B.
-Diósgyőri VTK;Zalaegerszeg;2025-08-02;NB I;2;33;Döntetlen;Diósgyőri Stadion;5697;Zierkelbach P.
+Diósgyőri VTK;Kazincbarcika;2025-08-16;NB I;4;2;2;27;Diósgyőri Stadion;5468;Bogár G.
+Zalaegerszeg;Újpest;2025-08-23;NB I;5;1;4;28;ZTE Aréna;4464;Antal P.
+Ferencvárosi TC;Puskás Akadémia;2025-08-16;NB I;4;1;2;31;Groupama Aréna;10679;Karakó F.
+Újpest;Paks;2025-08-10;NB I;3;1;2;33;Szusza Ferenc Stadion;8650;Berke B.
+Kisvárda;Paks;2025-08-03;NB I;2;1;5;30;Várkerti Stadion;2084;Bognár T.
+Paks;Győri ETO;2025-07-27;NB I;1;3;3;25;Fehérvári úti stadion;2679;Rúsz M.
+Győri ETO;Nyíregyháza;2025-08-31;NB I;6;1;0;20;ETO Park;3340;Bogár G.
+Nyíregyháza;Diósgyőri VTK;2025-08-23;NB I;5;1;4;26;Városi Stadion;7083;Berke B.
+Nyíregyháza;Ferencvárosi TC;2025-08-09;NB I;3;1;4;25;Városi Stadion;7980;Csonka B.
+Diósgyőri VTK;Zalaegerszeg;2025-08-02;NB I;2;2;2;33;Diósgyőri Stadion;5697;Zierkelbach P.
