@@ -18,31 +18,61 @@
       <h1 class="display-1 fw-bold nagycim">Kapcsolat</h1>
       <p class="alszoveg">Írj nekünk bátran, ha van ötleted, kérdésed vagy csak megosztanád a véleményed a magyar fociról!</p>
     </div>
-  </header> 
+  </header>
+<header class="text-center py-5">
+  <div class="container-fluid">
+    <h2 class="display-1 fw-bold kozepescim">GonzoFoci Meccs Feldolgozó</h2>
+  </div>
+</header>
+<section class="tutorial py-5 bg-light">
+  <div class="container">
+    <h3 class="fw-bold mb-4 text-center">📘 Hogyan küldd be az adatokat?</h3>
+    <ol class="list-group list-group-numbered">
+      <li class="list-group-item">
+        Töltsd ki a <strong>Név</strong> és <strong>E-mail</strong> mezőt, hogy fel tudjuk venni veled a kapcsolatot.
+      </li>
+      <li class="list-group-item">
+        A <strong>Meccs adatai</strong> mezőbe írd be a mérkőzés adatait az alábbi formátumban:<br>
+        <code>Csapat1 neve, Csapat2 neve, Meccs dátuma, Bajnokság, Forduló, Csapat1 gólok száma, Csapat2 gólok száma, Összes lövés, Helyszín, Nézőszám, Játékvezető</code>
+      </li>
+      <li class="list-group-item">
+        Ha már van egy <strong>CSV vagy TXT fájlod</strong> az adatokkal, töltsd fel a fájlmező segítségével.
+      </li>
+      <li class="list-group-item">
+        Nyomd meg az <strong>„Üzenet küldése”</strong> gombot. Ha minden rendben van, egy üzenet jelzi, hogy sikeres volt a beküldés.
+      </li>
+    </ol>
+    <p class="mt-4 text-center fst-italic">💡 Tipp: Ha nem vagy biztos a formátumban, töltsd le a minta sablont innen: 
+      <a href="meccsek.txt" class="fw-bold text-decoration-none">minta.txt</a>
+    </p>
+  </div>
+</section>
 <div class="row justify-content-center">
     <div class="col-md-4">
-      <form>
+      <form id="meccsUrlap" novalidate>
         <div class="mb-3">
-          <label for="name" class="form-label">Név</label>
-          <input type="text" class="form-control" id="name" placeholder="Add meg a neved">
+          <label for="nev" class="form-label">Név</label>
+          <input type="text" class="form-control" id="nev" placeholder="Add meg a neved" required>
+          <div class="invalid-feedback">Kérlek, add meg a neved!</div>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="email" placeholder="Add meg az e-mail címed">
+          <input type="email" class="form-control" id="email" placeholder="Add meg az e-mail címed" required>
+          <div class="invalid-feedback">Kérlek, érvényes e-mail címet adj meg!</div>
         </div>
         <div class="mb-3">
-          <label for="message" class="form-label">Üzenet</label>
-          <textarea class="form-control" id="message" rows="5" placeholder="Írd ide az üzeneted"></textarea>
+          <label for="uzenet" class="form-label">Meccs adatai vagy linkje</label>
+          <textarea class="form-control" id="uzenet" rows="5" placeholder="Csapat1 neve,Csapat2 neve,Meccs dátuma,Bajnokság,Forduló,Csapat 1 gólok száma,Csapat 2 gólok száma, Összes lövés,Helyszín,Nézőszám,Játékvezető" required></textarea>
+          <div class="invalid-feedback">Kérlek, add meg a meccs adatait!</div>
         </div>
         <div class="mb-3">
-          <label for="message" class="form-label">Adatot tartalmazó fájl feltöltése</label>
-          <br>
-          <input type="file" id="myfile" name="myfile">
+          <label for="fajl" class="form-label">Adatot tartalmazó fájl feltöltése (opcionális)</label>
+          <input type="file" class="form-control" id="fajl" name="fajl">
         </div>
-        <button type="submit" class="btn gomb" onclick="alert('Sikeres küldés!')">Üzenet küldése</button>
+        <button type="submit" class="btn gomb w-100">Üzenet küldése</button>
       </form>
     </div>
-</div>
+  </div>
   <div class="promo text-center py-5">
     <div class="container">
       <h2 class="fw-bold mb-4 text-white">Információink</h2>
@@ -57,4 +87,23 @@
 </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<script>
+    (function () {
+      'use strict'
+      const urlap = document.getElementById('meccsUrlap');
+      urlap.addEventListener('submit', function (esemeny) {
+        if (!urlap.checkValidity()) {
+          esemeny.preventDefault();
+          esemeny.stopPropagation();
+        } else {
+          esemeny.preventDefault();
+          alert('Sikeres küldés!');
+          urlap.reset();
+          urlap.classList.remove('was-validated');
+          return;
+        }
+        urlap.classList.add('was-validated');
+      }, false)
+    })()
+  </script>
 </html>
