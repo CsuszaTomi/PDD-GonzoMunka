@@ -12,7 +12,7 @@ html, body {
 
 @media (max-width: 768px) {
     .nagycim {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 
@@ -66,4 +66,7 @@ main {
 }
 .hirek{
  text-align: center;
+}
+.mag200{
+    min-height: 200px;
 }

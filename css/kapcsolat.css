@@ -14,6 +14,14 @@ html, body {
     .nagycim {
         font-size: 5rem;
     }
+    .kozepescim{
+    font-size: 0.5rem;
+    }
+}
+
+.kozepescim{
+    font-size: 4rem;
+    color: black;
 }
 .alszoveg{
     color: rgb(252, 251, 249);
@@ -72,6 +80,5 @@ main {
  text-align: center;
 }
 form {
-  margin-left: 50px;
   text-align: center;
 }
