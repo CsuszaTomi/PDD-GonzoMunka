@@ -17,11 +17,39 @@
     <div class="container-fluid">
       <h1 class="display-1 fw-bold nagycim">Kapcsolat</h1>
       <p class="alszoveg">Írj nekünk bátran, ha van ötleted, kérdésed vagy csak megosztanád a véleményed a magyar fociról!</p>
+      <a href="#feldolgozo" class="btn btn-light btn-lg fw-bold">Meccs Feldolgozó</a>
     </div>
   </header>
+    <section class="py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Lépj kapcsolatba velünk!</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form id="kapcsolatUrlap" novalidate>
+            <div class="mb-3">
+              <label for="kapcsnev" class="form-label">Név</label>
+              <input type="text" class="form-control" id="kapcsnev" placeholder="Add meg a neved" required>
+              <div class="invalid-feedback">Kérlek, add meg a neved!</div>
+            </div>
+            <div class="mb-3">
+              <label for="kapcsemail" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="kapcsemail" placeholder="Add meg az e-mail címed" required>
+              <div class="invalid-feedback">Kérlek, érvényes e-mail címet adj meg!</div>
+            </div>
+            <div class="mb-3">
+              <label for="kapcsuzenet" class="form-label">Üzenet</label>
+              <textarea class="form-control" id="kapcsuzenet" rows="4" placeholder="Írd ide az üzeneted..." required></textarea>
+              <div class="invalid-feedback">Kérlek, írj üzenetet!</div>
+            </div>
+            <button type="submit" class="btn gomb w-100">Üzenet küldése</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 <header class="text-center py-5">
   <div class="container-fluid">
-    <h2 class="display-1 fw-bold kozepescim">GonzoFoci Meccs Feldolgozó</h2>
+    <h2 class="display-1 fw-bold kozepescim" id="feldolgozo">GonzoFoci Meccs Feldolgozó</h2>
   </div>
 </header>
 <div class="py-5 bg-light">
@@ -88,22 +116,36 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <script>
-    (function () {
-      'use strict'
-      const urlap = document.getElementById('meccsUrlap');
-      urlap.addEventListener('submit', function (esemeny) {
-        if (!urlap.checkValidity()) {
-          esemeny.preventDefault();
-          esemeny.stopPropagation();
-        } else {
-          esemeny.preventDefault();
-          alert('Sikeres küldés!');
-          urlap.reset();
-          urlap.classList.remove('was-validated');
-          return;
-        }
-        urlap.classList.add('was-validated');
-      }, false)
-    })()
-  </script>
+  (function () {
+    'use strict'
+    const urlap = document.getElementById('meccsUrlap');
+    urlap.addEventListener('submit', function (esemeny) {
+      if (!urlap.checkValidity()) {
+        esemeny.preventDefault();
+        esemeny.stopPropagation();
+      } else {
+        esemeny.preventDefault();
+        alert('Sikeres küldés!');
+        urlap.reset();
+      }
+      urlap.classList.add('was-validated');
+    }, false)
+  })();
+
+  (function () {
+    'use strict'
+    const kapcsolatUrlap = document.getElementById('kapcsolatUrlap');
+    kapcsolatUrlap.addEventListener('submit', function (esemeny) {
+      if (!kapcsolatUrlap.checkValidity()) {
+        esemeny.preventDefault();
+        esemeny.stopPropagation();
+      } else {
+        esemeny.preventDefault();
+        alert('✅ Kapcsolatfelvételi üzenet sikeresen elküldve!');
+        kapcsolatUrlap.reset();
+      }
+      kapcsolatUrlap.classList.add('was-validated');
+    }, false)
+  })();
+</script>
 </html>
