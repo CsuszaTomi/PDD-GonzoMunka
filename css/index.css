@@ -68,5 +68,8 @@ main {
  text-align: center;
 }
 .mag200{
-    min-height: 200px;
+    min-height: 0px;
+}
+.reklamkartya{
+    max-width: 400px;
 }
